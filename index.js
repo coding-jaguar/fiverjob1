@@ -5,7 +5,7 @@ import cors from "cors";
 import charachter_file from "./character_file.json" with { type: "json" };;
 
 dotenv.config();
-PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 const character = charachter_file.character;
 const { name, bio, lore, knowledge, style, topics, postExamples } = character;
