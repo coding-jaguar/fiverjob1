@@ -71,7 +71,7 @@ app.use(cors());
 app.get("/chat", async (req, res) => {
     try {
       const response = await generateResponse();
-      console.log(response.content);
+  
       
       const tweets = response.content.split("\n").filter(tweet => tweet.length>0).slice(0, 5);
 
