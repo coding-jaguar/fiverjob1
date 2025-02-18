@@ -5,6 +5,7 @@ import cors from "cors";
 import charachter_file from "./character_file.json" with { type: "json" };;
 
 dotenv.config();
+PORT = process.env.PORT || 5000;
 
 const character = charachter_file.character;
 const { name, bio, lore, knowledge, style, topics, postExamples } = character;
@@ -83,6 +84,6 @@ app.get("/chat", async (req, res) => {
     }
   });
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
